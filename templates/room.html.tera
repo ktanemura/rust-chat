@@ -1,0 +1,20 @@
+{%- extends "base" -%}
+{%- block page_content -%}
+<h1>{{room_name}}</h1>
+<div id="messages" class="messages">
+    {%- for m in messages %}
+        <div class="message">
+            <strong class="username">< {{m.time}} > {{m.user}}:</strong><p class="message-content">{{m.content}}</p>
+        </div>
+    {%- endfor -%}
+</div>
+<form id="sendMessageForm" data-room-id="{{room_id}}">
+    <textarea name="message" id="message" class="message-box" required="required"></textarea>
+    <p class="warning-text" id="warningMsg"></p>
+    <button type="submit" class="button btn">Send</button>
+</form>
+{%- endblock page_content %}
+{%- block page_scripts %}
+    {{super()}}
+    <script src="/js/message.js"></script>
+{%- endblock page_scripts -%}

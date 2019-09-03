@@ -1,0 +1,13 @@
+{%- extends "base" -%}
+{%- block page_content -%}
+    <h1>Login</h1>
+    <form id="loginForm">
+        <label for="username">Username:</label><input type="text" name="username" id="username"/>
+        <label for="password">Password:</label><input type="password" name="password" id="password"/>
+        <button type="submit" class="button btn">Login</button>
+    </form>
+    <p class="warning-text" id="warningMsg"></p>
+{%- endblock page_content -%}
+{% block page_scripts %}
+<script src="/js/login.js"></script>
+{% endblock page_scripts %}

@@ -1,0 +1,11 @@
+{%- extends "base" -%}
+{%- block page_content -%}
+<h1>Available Chat Rooms</h1>
+{% if rooms | length() > 0 -%}
+    {%- for room in rooms -%}
+    <a href="/rooms/{{room.id}}">{{room.name}}</a>
+    {%- endfor -%}
+{% else -%}
+    No rooms are available
+{%- endif %}
+{%- endblock page_content -%}

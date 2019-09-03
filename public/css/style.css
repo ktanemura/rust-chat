@@ -1,0 +1,9 @@
+.message {
+    margin-top: 1 rem;
+    margin-bottom: 1rem;
+}
+
+.message-content {
+    display: inline;
+    margin-left: 5px;
+}
